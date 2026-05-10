@@ -110,16 +110,19 @@ MainActivity : AppCompatActivity() {
     }
 
     private fun goToHome() {
+        //home screen
 //        startActivity(Intent(this, HomeActivity::class.java))
 //        finish()
     }
 
     private fun showError(msg: String) {
+
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
     }
 
     override fun onStart() {
         super.onStart()
+        //home screen
 
         if (auth.currentUser != null) {
             goToHome()
