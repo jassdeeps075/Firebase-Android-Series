@@ -1,4 +1,7 @@
-package com.example.goxos.realtime_database
+package com.example.goxos.firestore_database
+
+import com.example.goxos.realtime_database.User
+
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,12 +10,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.goxos.R
-import com.example.goxos.firestore_database.UserClickListener
 
-class UserAdapter(
-    private val list: ArrayList<User>,
-    private val listener: OnItemClick
-) : RecyclerView.Adapter<UserAdapter.ViewHolder>() {
+class FirestoreUserAdapter(
+    private val list: ArrayList<UserData>,
+    private val listener: UserClickListener
+) : RecyclerView.Adapter<FirestoreUserAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTv: TextView = itemView.findViewById(R.id.nameTv)
@@ -35,13 +37,11 @@ class UserAdapter(
         holder.emailTv.text = user.email
 
         holder.deleteIv.setOnClickListener {
-            listener.onDelete(user)
+            listener.onDeleteClick(user)
         }
         holder.editIv.setOnClickListener {
-            listener.onUpdate(user)
+            listener.onUpdateClick(user)
         }
-
-//
     }
 
     override fun getItemCount(): Int = list.size

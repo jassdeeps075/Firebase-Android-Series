@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".firestore_database.FirestoreUsersActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add User"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="18sp"
+        android:background="@drawable/user_drawable"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:elevation="2dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/user_drawable"
+        android:padding="10dp"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="15dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/nameEt"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/rect_shape"
+            android:hint="Please Enter User Name"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="16sp"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:paddingHorizontal="10dp"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/emailEt"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/rect_shape"
+            android:hint="Please Enter Email"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="16sp"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="10dp"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addBtn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Add User"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rect_shape"
+            android:layout_marginEnd="5dp"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Users"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="18sp"
+        android:background="@drawable/user_drawable"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:elevation="2dp"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="15dp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:listitem="@layout/user_item_layout"
+        android:layout_marginHorizontal="10dp" />
+
+</LinearLayout>

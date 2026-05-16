@@ -28,6 +28,7 @@ firebasebom = {module ="com.google.firebase:firebase-bom", version.ref ="firebas
 firebaseauth = {module = "com.google.firebase:firebase-auth"}
 google-services-auth = {module = "com.google.android.gms:play-services-auth", version.ref = "googleServicesAuth"}
 firebase-database-ktx = { module="com.google.firebase:firebase-database" }
+firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
 
 
 [plugins]

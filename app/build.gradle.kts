@@ -53,5 +53,5 @@ dependencies {
     implementation(libs.firebaseauth)
     implementation(libs.google.services.auth)
     implementation(libs.firebase.database.ktx)
-
+    implementation(libs.firebase.firestore)
 }
